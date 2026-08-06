@@ -89,6 +89,7 @@ npm run build
 - **LinkedIn:** [Mohamed Ben Izza](https://www.linkedin.com/in/mohamed-ben-izza/)
 - **GitHub:** [@SimoBnz1](https://github.com/SimoBnz1)
 - **Email:** `mohamed.benizza3@gmail.com`
+- **link PortFolio :** `https://ben-izza-portfolio.netlify.app/`
 
 ---
 
