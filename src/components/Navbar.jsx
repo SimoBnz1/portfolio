@@ -1,6 +1,6 @@
 import React from 'react';
 import { profileData } from '../data/portfolioData';
-import profileImg from '../assets/profile.jpg'; // <--- 1. استورد الصورة هنا
+import profileImg from '../profile.jpg'; // <--- 1. استورد الصورة هنا
 
 export default function Hero() {
   return (

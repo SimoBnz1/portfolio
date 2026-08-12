@@ -1,6 +1,6 @@
 import React from 'react';
 import { profileData } from '../data/portfolioData';
-
+import profile from '../assets/profile.jpg';
 export default function Hero() {
   return (
     <section id="about" className="min-h-screen pt-28 pb-16 flex items-center justify-center bg-[#0B0F17] text-white relative overflow-hidden">
@@ -17,7 +17,7 @@ export default function Hero() {
           {/* الصورة الشخصية */}
           <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden p-1 bg-[#0B0F17] border-2 border-purple-500/50 shadow-2xl">
             <img 
-              src="/profile.jpg" // تأكد من وضع صورتك باسم profile.jpg داخل مجلد public/
+              src="{profile}" // تأكد من وضع صورتك باسم profile.jpg داخل مجلد public/
               alt={`${profileData.firstName} ${profileData.lastName}`}
               className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500"
             />
