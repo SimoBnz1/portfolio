@@ -10,7 +10,7 @@ export default function Navbar() {
           <a href="#" className="text-xl font-bold bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-transparent">
             MBI<span className="text-purple-500">.dev</span>
           </a>
-          
+
           <div className="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
             <a href="#about" className="hover:text-purple-400 transition-colors">Profil</a>
             <a href="#skills" className="hover:text-purple-400 transition-colors">Compétences</a>
@@ -19,8 +19,8 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:block">
-            <a 
-              href="/CV_Mohamed_BENIZZA.pdf" 
+            <a
+              href="/CV_Mohamed_BENIZZA.pdf"
               download="CV_Mohamed_BENIZZA.pdf"
               className="px-4 py-2 text-sm font-semibold text-white bg-purple-600 hover:bg-purple-700 rounded-lg transition-all shadow-lg shadow-purple-900/40"
             >
@@ -28,8 +28,8 @@ export default function Navbar() {
             </a>
           </div>
 
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
+          <button
+            onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-400 hover:text-white focus:outline-none"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -49,10 +49,12 @@ export default function Navbar() {
           <a href="#skills" onClick={() => setIsOpen(false)} className="block py-2 hover:text-purple-400">Compétences</a>
           <a href="#projects" onClick={() => setIsOpen(false)} className="block py-2 hover:text-purple-400">Projets</a>
           <a href="#contact" onClick={() => setIsOpen(false)} className="block py-2 hover:text-purple-400">Contact</a>
-          <a 
-            href="/CV_Mohamed_BENIZZA.pdf" 
+          <a
+            href={`${import.meta.env.BASE_URL}CV_Mohamed_BENIZZA.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
             download="CV_Mohamed_BENIZZA.pdf"
-            className="block text-center mt-2 px-4 py-2 text-sm font-semibold text-white bg-purple-600 rounded-lg"
+            className="px-4 py-2 text-sm font-semibold text-white bg-purple-600 hover:bg-purple-700 rounded-lg transition-all shadow-lg shadow-purple-900/40 cursor-pointer"
           >
             Télécharger CV
           </a>

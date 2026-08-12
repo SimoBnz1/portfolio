@@ -4,9 +4,36 @@ import { profileData } from '../data/portfolioData';
 export default function Hero() {
   return (
     <section id="about" className="min-h-screen pt-28 pb-16 flex items-center justify-center bg-[#0B0F17] text-white relative overflow-hidden">
+      {/* خلفية ضوئية متحركة (Glow Background) */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/20 blur-[120px] rounded-full pointer-events-none"></div>
 
-      <div className="max-w-5xl mx-auto px-4 text-center z-10">
+      <div className="max-w-5xl mx-auto px-4 text-center z-10 flex flex-col items-center">
+        
+        {/* قسم الصورة المدورة بستايل سايبر نيون واعر */}
+        <div className="relative mb-8 group">
+          {/* إطار مضيء خلف الصورة (Animated Neon Glow Ring) */}
+          <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-600 via-indigo-500 to-purple-600 opacity-75 blur-md group-hover:opacity-100 group-hover:blur-lg transition-all duration-500 animate-pulse"></div>
+          
+          {/* الصورة الشخصية */}
+          <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden p-1 bg-[#0B0F17] border-2 border-purple-500/50 shadow-2xl">
+            <img 
+              src="/profile.jpg" // تأكد من وضع صورتك باسم profile.jpg داخل مجلد public/
+              alt={`${profileData.firstName} ${profileData.lastName}`}
+              className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          {/* شارة توفر العمل الحية (Available Status Badge) */}
+          <div className="absolute bottom-1 right-1 flex items-center gap-1.5 px-3 py-1 bg-[#0F172A]/90 border border-green-500/40 rounded-full shadow-lg backdrop-blur-md">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
+            <span className="text-[10px] font-bold text-green-400 tracking-wide uppercase">Open to work</span>
+          </div>
+        </div>
+
+        {/* الشارة التوضيحية للفرصة */}
         <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-purple-400 bg-purple-950/60 border border-purple-800/50 rounded-full mb-6">
           {profileData.opportunity}
         </span>
@@ -23,10 +50,11 @@ export default function Hero() {
           {profileData.bio}
         </p>
         
+        {/* أزرار التفاعل */}
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a 
             href="#projects" 
-            className="px-6 py-3 font-semibold text-white bg-purple-600 hover:bg-purple-700 rounded-lg shadow-lg shadow-purple-900/50 transition-all"
+            className="px-6 py-3 font-semibold text-white bg-purple-600 hover:bg-purple-700 rounded-lg shadow-lg shadow-purple-900/50 transition-all hover:scale-105"
           >
             Voir mes projets
           </a>
@@ -34,7 +62,7 @@ export default function Hero() {
             href={profileData.githubUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-6 py-3 font-semibold text-gray-300 bg-gray-900/80 hover:bg-gray-800 border border-gray-700 rounded-lg transition-all"
+            className="px-6 py-3 font-semibold text-gray-300 bg-gray-900/80 hover:bg-gray-800 border border-gray-700 rounded-lg transition-all hover:scale-105"
           >
             GitHub
           </a>
@@ -42,7 +70,7 @@ export default function Hero() {
             href={profileData.linkedinUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-6 py-3 font-semibold text-gray-300 bg-gray-900/80 hover:bg-gray-800 border border-gray-700 rounded-lg transition-all"
+            className="px-6 py-3 font-semibold text-gray-300 bg-gray-900/80 hover:bg-gray-800 border border-gray-700 rounded-lg transition-all hover:scale-105"
           >
             LinkedIn
           </a>
